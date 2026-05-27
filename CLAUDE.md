@@ -1,11 +1,11 @@
 # MeloTTS → QNN DSP Acceleration Project
 
 > 全国大学生嵌入式芯片与系统设计竞赛 — 2026 芯片应用赛道广和通赛题
-> 选题方向一：AIoT 行业场景 — 基于 FiboT567 (QCM6490) 的端侧 TTS 语音合成加速
+> 选题方向一：AIoT 行业场景 — 基于 SC171 开发套件 V3 (QCS6490) 的端侧 TTS 语音合成加速
 
-Convert MeloTTS VITS HiFiGAN Generator to QNN DSP format, replicating the official FiboTTS approach on FiboT567 / SC171v3 (QCS6490, Hexagon v68).
+Convert MeloTTS VITS HiFiGAN Generator to QNN DSP format, replicating the official FiboTTS approach on SC171 开发套件 V3 (QCS6490, Hexagon v68).
 
-**Competition**: 全国大学生嵌入式芯片与系统设计竞赛, 芯片应用赛道, 广和通赛题. Core deliverable: low-latency edge TTS on FiboT567 (QCM6490, 4nm, 12 TOPS NPU) with DSP-accelerated vocoder.
+**Competition**: 全国大学生嵌入式芯片与系统设计竞赛, 芯片应用赛道, 广和通赛题. Core deliverable: low-latency edge TTS on SC171 V3 (QCS6490, ARM v8 Cortex 8核 @ 2.7GHz, 13 TOPS) with DSP-accelerated vocoder.
 
 **Dataset**: A2/A13 voices trained on [THCHS-30](https://huggingface.co/datasets/OpenDataLab___THCHS-30) (OpenDataLab), an open-source Chinese speech corpus.
 

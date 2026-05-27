@@ -1,18 +1,18 @@
 # MeloTTS QNN DSP Acceleration
 
 > 全国大学生嵌入式芯片与系统设计竞赛 — 2026 芯片应用赛道广和通赛题
-> 选题方向一：AIoT 行业场景 — 基于 FiboT567 (QCM6490) 的端侧 TTS 语音合成加速
+> 选题方向一：AIoT 行业场景 — 基于 SC171 开发套件 V3 (QCS6490) 的端侧 TTS 语音合成加速
 
-MeloTTS HiFiGAN Generator running on Qualcomm Hexagon v68 DSP via QNN framework. Achieves **RTF 0.136** (202ms/chunk) — 3-6x faster than ONNX CPU on SC171v3 (QCS6490).
+MeloTTS HiFiGAN Generator running on Qualcomm Hexagon v68 DSP via QNN framework. Achieves **RTF 0.136** (202ms/chunk) — 3-6x faster than ONNX CPU on SC171 开发套件 V3 (QCS6490).
 
 ## Competition
 
 本项目参加 **全国大学生嵌入式芯片与系统设计竞赛 — 芯片应用赛道**，选用**广和通赛题**，方向为 **AIoT 行业场景**。
 
-- **核心任务**: 利用 FiboT567 (基于高通 QCM6490) 实现低延迟端侧语音合成 (TTS)
+- **核心任务**: 利用 SC171 开发套件 V3 (高通 QCS6490) 实现低延迟端侧语音合成 (TTS)
 - **技术路线**: MeloTTS → ONNX → QNN INT8 量化 → Hexagon v68 DSP 推理
 - **关键指标**: RTF 0.136，单次推理 202ms/chunk，实时率远超 1.0
-- **硬件平台**: 广和通 FiboT567 开发板 (SC171v3, QCS6490, 4nm 制程, 12 TOPS NPU)
+- **硬件平台**: SC171 开发套件 V3，ARM v8 Cortex 8 核 @ 2.7GHz，GPU + NPU (DSP) 综合算力 13 TOPS
 - **评测数据集**: A2/A13 音色基于 [THCHS-30](https://huggingface.co/datasets/OpenDataLab___THCHS-30) 开源中文语音数据集训练
 
 ## Performance
@@ -114,8 +114,11 @@ adb shell "python3 /tmp/test_qnn_so.py"
 
 ## Board environment
 
-- **Device**: 广和通 FiboT567 (SC171v3), Qualcomm QCM6490 (4nm, 12 TOPS NPU)
+- **Device**: SC171 开发套件 V3，Qualcomm QCS6490，ARM v8 Cortex 8 核 @ 2.7GHz
+- **算力**: GPU + NPU (DSP)，综合 13 TOPS
 - **DSP**: Hexagon v68
+- **通信**: WiFi、蓝牙
+- **外设**: USB / UART / RS232 / RS485 / CAN / GPIO / ADC / PWM / HDMI / 音频 / SD 卡座 / LAN
 - **OS**: Ubuntu 20.04 aarch64, Python 3.8.10
 - **SDK**: fiboaisdk 2.0.20, QNN SDK 2.26.2
 - **Access**: `adb -s 28de40d2 root`
