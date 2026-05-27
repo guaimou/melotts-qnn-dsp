@@ -45,8 +45,7 @@ Text → [CPU: ONNX Encoder+DP] → z_latent → [DSP: QNN INT8 Generator] → A
 | **v11 cle** | **gen_cle_sqnr.bin** | **CLE + SQNR** | **Good — Quiet RMS 156** | **Testing** |
 | **v12 dual** | **gen_cle_sqnr.bin** | **CLE + SQNR + Dual-pass** | **Quiet RMS -24.5%** | **Testing** |
 | **v13 noise_gate** | — | **CLE + SQNR + Noise Gate** | **Best — Quiet RMS -77.5%** | **Testing** |
-| **v14 w8a16** | **gen_cle_w8a16.bin** | **CLE + W8A16** | **Best — Quiet RMS -89.8% vs INT8** | **Deployed (default)** |
-| **Next** | **a2/a13 w8a16** | **Per-voice W8A16** | **TBD** | **TODO** |
+| v14 w8a16 | gen_cle_w8a16.bin | CLE + W8A16 | Not implemented — fiboaisdk API doesn't support uint16 | Failed |
 
 ## Performance (board, Option B generator)
 
@@ -55,7 +54,6 @@ Text → [CPU: ONNX Encoder+DP] → z_latent → [DSP: QNN INT8 Generator] → A
 | **QNN DSP** | **INT8** | **0.136** | **202ms** | **3-6x** |
 | v68 | QNN DSP | FP32 | — | N/A | **Failed** — "SocModel doesn't support FP16" |
 | v68 | QNN DSP | INT16 | — | N/A | **Failed** — v68 INT8 only |
-| **v68** | **QNN DSP** | **W8A16** | **0.417** | **619ms** | **Best quality, -89.8% noise** |
 | **v68** | **QNN DSP** | **INT8** | **0.136** | **274ms** | **3-6x faster than CPU FP32** |
 | v68 | SNPE DSP | INT16 | 1.92 | 2859ms | 0.5x (slower!) |
 | CPU | ONNX | FP32 | 0.55 | 820ms | 1.0x baseline |

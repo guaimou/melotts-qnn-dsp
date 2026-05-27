@@ -20,10 +20,11 @@ MeloTTS HiFiGAN Generator running on Qualcomm Hexagon v68 DSP via QNN framework.
 | Backend | Quantization | RTF | ms/chunk | vs ONNX CPU |
 |---------|-------------|-----|----------|-------------|
 | **QNN DSP** | **INT8 (per-channel)** | **0.136** | **202ms** | **3-6x** |
-| QNN DSP | W8A16 | 0.417 | 619ms | Best quality |
 | SNPE DSP | INT16 | 1.92 | 2859ms | 0.5x (slower) |
 | ONNX CPU | FP32 | 0.55 | 820ms | baseline |
 | Official FiboTTS | INT16 | 0.38 | 571ms | — |
+
+> W8A16: fiboaisdk API 不支持 uint16 接口 (Execute_uint16)，该方案未实际实现。
 
 ### Full pipeline (encoder CPU + vocoder DSP)
 
@@ -43,7 +44,6 @@ MeloTTS HiFiGAN Generator running on Qualcomm Hexagon v68 DSP via QNN framework.
 | v10 adaround | AIMET AdaRound + INT8 | 196 | Testing |
 | v11 cle | CLE + SQNR | 156 | Testing |
 | v13 noise_gate | CLE + SQNR + Noise Gate | 45 (-77.5%) | Testing |
-| v14 w8a16 | CLE + W8A16 | best (-89.8% vs INT8) | Deployed (default) |
 
 ### Noise reduction techniques
 
