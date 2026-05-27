@@ -357,5 +357,5 @@ Algorithm: soft noise gate based on short-time SNR. 20ms windows, noise floor es
 ## Dev environment (Windows)
 
 - **Node.js**: Portable install at `%LOCALAPPDATA%\nodejs` (v24.15.0), added to user PATH
-- **caveman**: Claude Code plugin + hooks (SessionStart, UserPromptSubmit) + statusline badge + `caveman-shrink` MCP. Installed via `node bin/install.js --only claude --force` from local clone at `D:\ai_model\melotts_qnn_dsp\caveman\`
+- **caveman**: Claude Code plugin + hooks (SessionStart, UserPromptSubmit) + statusline badge + `caveman-shrink` MCP. Installed via `node bin/install.js --only claude --force` from shared location at `D:\ai_model\caveman\`
 - **adb**: `adb -s 28de40d2` (must `adb root` before writing to board)
