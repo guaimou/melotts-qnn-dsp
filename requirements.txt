@@ -1,0 +1,16 @@
+# MeloTTS → QNN DSP Acceleration
+# Core deps (use melo_tts_zh_multi/venv_local for PyTorch/ONNX export)
+torch>=2.0.0
+torchaudio
+numpy
+onnx>=1.14.0
+onnxruntime
+soundfile
+librosa
+
+# For QNN conversion (in Docker: /opt/snpe_python310_env/)
+# onnx==1.16.1
+# protobuf>=3.19,<3.21
+
+# For evaluation
+# resemblyzer, pesq, pyworld (see melo_tts_zh_multi/eval_tts_metrics.py)

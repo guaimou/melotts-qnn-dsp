@@ -1,0 +1,47 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Claude Code
+.claude/
+
+# Large model files
+*.pth
+*.onnx
+*.dlc
+*.bin
+*.cpp
+*.so
+*.whl
+*.tar.gz
+*.zip
+
+# QNN/AIMET SDK directories
+qnn_sdk*/
+qairt*/
+qnn_libs/
+qnn_python/
+qnn_tools/
+
+# Calibration data (generated)
+calib_*/
+calib_real/
+
+# Board audio samples and outputs
+board_audio/*.wav
+output/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.code-workspace
+
+# External plugins
+caveman/
+
+# Temp files
+temp_help.txt
+converter_help.txt
